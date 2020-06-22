@@ -1,9 +1,7 @@
-package LanguageSchool.LSApplication.entity;
+package LanguageSchool.LSApplication.entity.Person;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 
 @Entity
 @DiscriminatorValue(value = "employee")

@@ -1,8 +1,10 @@
-package LanguageSchool.LSApplication.dto;
+package LanguageSchool.LSApplication.dto.Person;
 
 import LanguageSchool.LSApplication.dto.Appointment.ExamDto;
 import LanguageSchool.LSApplication.dto.Appointment.LessonDto;
 import LanguageSchool.LSApplication.dto.Appointment.OtherEventDto;
+import LanguageSchool.LSApplication.dto.ClientRoleDto;
+import LanguageSchool.LSApplication.dto.GroupDto;
 import LanguageSchool.LSApplication.enums.CEFRLevel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

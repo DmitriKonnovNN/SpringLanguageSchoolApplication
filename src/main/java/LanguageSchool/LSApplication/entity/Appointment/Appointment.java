@@ -1,8 +1,6 @@
-package LanguageSchool.LSApplication.entity;
+package LanguageSchool.LSApplication.entity.Appointment;
 
-import LanguageSchool.LSApplication.dto.GroupDto;
-import LanguageSchool.LSApplication.dto.PersonDto;
-import LanguageSchool.LSApplication.dto.PlaceDto;
+import LanguageSchool.LSApplication.entity.BasicEntity;
 
 
 import javax.persistence.*;
@@ -25,10 +23,10 @@ public abstract class Appointment extends BasicEntity {
     @Column (name  = "employees")
     private List<PersonDto> CurrentEmployees;
 
-    @Column  (name  = "currentStudents")
+    @Column (name  = "current_students")
     private List <PersonDto> CurrentStudents;
 
-    @Column  (name  = "place")
+    @Column (name  = "place")
     private PlaceDto place;
 
     @Column(name  = "equipment")

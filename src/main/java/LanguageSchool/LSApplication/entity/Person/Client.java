@@ -1,4 +1,6 @@
-package LanguageSchool.LSApplication.entity;
+package LanguageSchool.LSApplication.entity.Person;
+
+import LanguageSchool.LSApplication.entity.Address;
 
 import javax.persistence.*;
 

@@ -1,6 +1,6 @@
 package LanguageSchool.LSApplication.dto.Appointment;
 
-import LanguageSchool.LSApplication.dto.PersonDto;
+import LanguageSchool.LSApplication.dto.Person.PersonDto;
 import LanguageSchool.LSApplication.dto.ResultsOfExamDto;
 import LanguageSchool.LSApplication.dto.SubjectDto;
 import com.fasterxml.jackson.annotation.JsonProperty;

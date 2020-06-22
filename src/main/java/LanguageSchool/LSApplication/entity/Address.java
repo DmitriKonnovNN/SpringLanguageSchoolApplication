@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Address {
+public class Address extends BasicEntity {
 
     @Column(name = "postcode")
     private String postcode;

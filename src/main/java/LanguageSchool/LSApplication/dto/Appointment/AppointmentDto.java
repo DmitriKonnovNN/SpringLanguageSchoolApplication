@@ -2,7 +2,7 @@ package LanguageSchool.LSApplication.dto.Appointment;
 
 import LanguageSchool.LSApplication.dto.BasicDto;
 import LanguageSchool.LSApplication.dto.GroupDto;
-import LanguageSchool.LSApplication.dto.PersonDto;
+import LanguageSchool.LSApplication.dto.Person.PersonDto;
 import LanguageSchool.LSApplication.dto.PlaceDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

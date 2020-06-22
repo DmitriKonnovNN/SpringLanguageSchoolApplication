@@ -1,5 +1,7 @@
-package LanguageSchool.LSApplication.entity;
+package LanguageSchool.LSApplication.entity.Person;
 
+
+import LanguageSchool.LSApplication.entity.BasicEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

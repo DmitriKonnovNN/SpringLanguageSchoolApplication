@@ -1,10 +1,10 @@
 package LanguageSchool.LSApplication.service;
 
 import LanguageSchool.LSApplication.dto.Appointment.AppointmentDto;
-import LanguageSchool.LSApplication.dto.ClientDto;
+import LanguageSchool.LSApplication.dto.Person.ClientDto;
 import LanguageSchool.LSApplication.dto.ClientRoleDto;
 import LanguageSchool.LSApplication.dto.GroupDto;
-import LanguageSchool.LSApplication.dto.PersonDto;
+import LanguageSchool.LSApplication.dto.Person.PersonDto;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

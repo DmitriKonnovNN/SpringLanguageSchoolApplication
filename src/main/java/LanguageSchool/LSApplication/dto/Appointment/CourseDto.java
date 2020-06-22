@@ -1,6 +1,5 @@
 package LanguageSchool.LSApplication.dto.Appointment;
 
-import LanguageSchool.LSApplication.dto.PersonDto;
 import LanguageSchool.LSApplication.enums.CEFRLevel;
 import LanguageSchool.LSApplication.enums.LearningGroupType;
 import com.fasterxml.jackson.annotation.JsonProperty;

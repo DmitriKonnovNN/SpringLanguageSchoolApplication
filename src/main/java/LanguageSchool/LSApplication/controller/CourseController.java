@@ -2,9 +2,6 @@ package LanguageSchool.LSApplication.controller;
 
 import LanguageSchool.LSApplication.dto.Appointment.AppointmentDto;
 import LanguageSchool.LSApplication.dto.Appointment.CourseDto;
-import LanguageSchool.LSApplication.dto.ClientDto;
-import LanguageSchool.LSApplication.dto.ClientRoleDto;
-import LanguageSchool.LSApplication.dto.PersonDto;
 import LanguageSchool.LSApplication.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

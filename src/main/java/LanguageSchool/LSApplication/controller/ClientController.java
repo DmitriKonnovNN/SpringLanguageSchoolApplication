@@ -1,19 +1,16 @@
 package LanguageSchool.LSApplication.controller;
 
 import LanguageSchool.LSApplication.dto.Appointment.AppointmentDto;
-import LanguageSchool.LSApplication.dto.ClientDto;
+import LanguageSchool.LSApplication.dto.Person.ClientDto;
 import LanguageSchool.LSApplication.dto.ClientRoleDto;
-import LanguageSchool.LSApplication.dto.PersonDto;
+import LanguageSchool.LSApplication.dto.Person.PersonDto;
 import LanguageSchool.LSApplication.service.ClientService;
-import org.hibernate.annotations.GeneratorType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.net.http.HttpHeaders;
 import java.util.List;
-import java.util.Map;
 
 
 @RestController

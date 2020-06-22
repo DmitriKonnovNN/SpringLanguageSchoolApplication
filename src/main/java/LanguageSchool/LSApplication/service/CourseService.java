@@ -3,7 +3,7 @@ package LanguageSchool.LSApplication.service;
 
 import LanguageSchool.LSApplication.dto.Appointment.AppointmentDto;
 import LanguageSchool.LSApplication.dto.Appointment.CourseDto;
-import LanguageSchool.LSApplication.dto.PersonDto;
+import LanguageSchool.LSApplication.dto.Person.PersonDto;
 
 import java.util.List;
 

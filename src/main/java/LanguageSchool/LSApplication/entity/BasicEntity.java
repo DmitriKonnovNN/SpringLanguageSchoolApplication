@@ -3,6 +3,7 @@ package LanguageSchool.LSApplication.entity;
 
 import javax.persistence.*;
 
+
 @MappedSuperclass
 public abstract class BasicEntity {
 
