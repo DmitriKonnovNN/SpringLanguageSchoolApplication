@@ -5,8 +5,10 @@ package LanguageSchool.LSApplication.entity;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+
+
 @Embeddable
-public class Address extends BasicEntity {
+public class Address {
 
     @Column(name = "postcode")
     private String postcode;

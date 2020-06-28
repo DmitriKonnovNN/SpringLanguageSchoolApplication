@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/LS_Application?createDatabaseIfNotExist=true&Unicode=true&serverTimezone=UTC
     username: root
-    password: @3DvH*L!z-%srf
+    password: 3DvH*L!z-%srf
 
   # Show SQL logs
 

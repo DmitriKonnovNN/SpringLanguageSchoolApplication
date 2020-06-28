@@ -4,11 +4,15 @@ package LanguageSchool.LSApplication.entity.Appointment;
 import LanguageSchool.LSApplication.converter.LearningGroupTypeConverter;
 import LanguageSchool.LSApplication.enums.CEFRLevel;
 import LanguageSchool.LSApplication.enums.LearningGroupType;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Getter
+@Setter
 @Entity
 @Table (name = "course")
 public class Course extends Appointment {
@@ -18,6 +22,7 @@ public class Course extends Appointment {
     //strategy = "org.hibernate.id.UUIDGenerator")
 
 
+    //@Enumerated(EnumType.STRING)// тогда можно без конвертера
     @Convert (converter = LearningGroupTypeConverter.class)
     private LearningGroupType groupType;
 
@@ -30,11 +35,13 @@ public class Course extends Appointment {
     @Column (name  = "target_language_level")
     private CEFRLevel targetLanguageLevel;
 
-    @Column (name  = "lessons_and_trainings")
-    private List<AppointmentDto> lessonsAndTrainings;
 
-    @Column (name  = "exams")
-    private List<ExamDto> exams;
+    @OneToMany (mappedBy = "course", cascade = CascadeType.ALL)
+    private List<Appointment> lessonsAndTrainings;
+
+
+    @OneToMany (mappedBy = "course",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Exam> exams;
 
 }
 

@@ -2,7 +2,10 @@ package LanguageSchool.LSApplication.entity;
 
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
+
+@Embeddable
 public class EmployeePosition extends BasicEntity{
 
     @Column(name= "position")

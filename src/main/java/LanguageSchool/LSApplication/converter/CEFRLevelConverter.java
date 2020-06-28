@@ -1,21 +1,21 @@
 package LanguageSchool.LSApplication.converter;
 
 
+import LanguageSchool.LSApplication.enums.CEFRLevel;
+
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
-@Converter (autoApply = true)
-public class CEFRLevelConverter implements AttributeConverter <CEFRLevelConverter, Integer> {
+@Converter (autoApply = true) // применить ко всем аттрибутам
+public class CEFRLevelConverter implements AttributeConverter <CEFRLevel, String> {
 
     @Override
-    public Integer convertToDatabaseColumn(CEFRLevelConverter attribute) {
-        return attribute.ordinal();
+    public String convertToDatabaseColumn(CEFRLevel cefrLevel) {
+        return cefrLevel.toString();
     }
-
     @Override
-    public CEFRLevelConverter convertToEntityAttribute(Integer dbData) {
-        return CEFRLevelConverter.val
+    public CEFRLevel convertToEntityAttribute(String dbStringData) {
+        return CEFRLevel.valueOf(dbStringData);
     }
-
 
 }

@@ -1,28 +1,40 @@
 package LanguageSchool.LSApplication.entity;
 
 
+import LanguageSchool.LSApplication.converter.LearningGroupTypeConverter;
+import LanguageSchool.LSApplication.entity.Appointment.Appointment;
+import LanguageSchool.LSApplication.entity.Appointment.Lesson;
 import LanguageSchool.LSApplication.enums.CEFRLevel;
+import lombok.Getter;
+import lombok.Setter;
 
 
-import javax.persistence.Column;
+import javax.persistence.*;
 import java.util.List;
 
+@Getter
+@Setter
+@Table (name = "group")
+@Entity
 public class Group extends BasicEntity {
-    @Column(name= "lessons")
-    private List<AppointmentDto> lessons;
+    @OneToMany (mappedBy = "group", cascade = CascadeType.ALL)
+    private List<Lesson> lessons;
 
-    @Column (name = "exams")
-    private List <AppointmentDto> exams;
+    @OneToMany (mappedBy = "group", cascade = CascadeType.ALL)
+    private List <Appointment> exams;
 
-    @Column (name = "other_events")
-    private List <AppointmentDto> otherEvents;
+    @OneToMany (mappedBy = "group", cascade = CascadeType.ALL)
+    private List <Appointment> otherEvents;
 
-    @Column (name = "employee_trainings")
-    private List <AppointmentDto> employeeTrainings;
+    @OneToMany (mappedBy = "group", cascade = CascadeType.ALL)
+    private List <Appointment> employeeTrainings;
 
-    @Column (name = "subject")
-    private SubjectDto subject;
+    @OneToOne
+    @JoinColumn (name = "subject_id")
+    private Subject subject;
+
 
     @Column (name = "target_language_level")
+    @Convert(converter = LearningGroupTypeConverter.class)
     private CEFRLevel targetLanguageLevel;
 }

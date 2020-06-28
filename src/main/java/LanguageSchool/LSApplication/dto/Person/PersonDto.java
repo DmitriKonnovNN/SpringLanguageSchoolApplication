@@ -12,14 +12,14 @@ import java.util.Date;
 public abstract class PersonDto extends BasicDto {
 
     @NotBlank (message = "first name cannot be empty")
-    @JsonProperty(value = "first_name")
+    @JsonProperty(value = "firstName")
     private String firstName;
 
     @NotBlank (message = "second name cannot be empty")
-    @JsonProperty (value = "second_name")
+    @JsonProperty (value = "secondName")
     private String secondName;
 
-    @JsonProperty (value = "last_name")
+    @JsonProperty (value = "lastName")
     private String lastName;
 
     @JsonProperty (value = "birthday")
@@ -31,7 +31,7 @@ public abstract class PersonDto extends BasicDto {
     @JsonProperty (value = "e_mail")
     private String email;
 
-    @JsonProperty (value = "phone_number")
+    @JsonProperty (value = "phoneNumber")
     private String phoneNumber;
 
     @JsonProperty (value = "login")

@@ -2,16 +2,22 @@ package LanguageSchool.LSApplication.entity.Person;
 
 
 import LanguageSchool.LSApplication.entity.BasicEntity;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
+@Setter
+@Getter
 @Entity
 @Table (name = "person")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn (name = "person_type")
-@DiscriminatorValue (value = "person")
+@Inheritance(strategy = InheritanceType.JOINED)
+//@DiscriminatorColumn (name = "person_type")
+//@DiscriminatorValue (value = "person")
+
 public abstract class Person extends BasicEntity {
 
     @Column (name = "first_name")
@@ -40,4 +46,7 @@ public abstract class Person extends BasicEntity {
 
     @Column (name = "password")
     private String password;
+
+
+
 }
