@@ -4,6 +4,7 @@ package LanguageSchool.LSApplication.entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GeneratorType;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -15,8 +16,10 @@ import java.util.Objects;
 public abstract class BasicEntity {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.TABLE)
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue (generator = "uuid")
+    @GenericGenerator(name = "uuid",
+    strategy = "org.hibernate.id.UUIDGenerator")
+
     @Access (AccessType.PROPERTY) // do I really need it?
     private Long id;
 
