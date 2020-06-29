@@ -12,7 +12,6 @@ import java.util.Objects;
 
 @MappedSuperclass
 @Getter
-@Setter
 public abstract class BasicEntity {
 
     @Id
